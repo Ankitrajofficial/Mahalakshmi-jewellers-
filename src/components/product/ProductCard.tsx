@@ -47,8 +47,8 @@ export function ProductCard({
           {isNew && !product.isMadeToOrder ? <Badge tone="gold">New</Badge> : null}
           {soldOut ? <Badge tone="ink">Sold</Badge> : null}
         </div>
-        <div className="absolute right-3 top-3 rounded-full bg-white/90 p-2 shadow-card">
-          <WishlistButton slug={product.slug} name={product.name} />
+        <div className="absolute right-2 top-2 rounded-full bg-white/90 shadow-card">
+          <WishlistButton slug={product.slug} name={product.name} className="h-10 w-10 justify-center" />
         </div>
       </div>
 

@@ -30,7 +30,7 @@ export function ShareButton({ name, slug }: { name: string; slug: string }) {
     <button
       type="button"
       onClick={onShare}
-      className="inline-flex items-center gap-2 text-[13px] text-muted transition-colors hover:text-gold-deep"
+      className="inline-flex min-h-11 items-center gap-2 text-[13px] text-muted transition-colors hover:text-gold-deep"
       aria-label={`Share ${name}`}
     >
       {copied ? <Check className="h-[18px] w-[18px]" aria-hidden="true" /> : <Share2 className="h-[18px] w-[18px]" aria-hidden="true" />}

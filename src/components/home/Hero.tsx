@@ -100,11 +100,15 @@ export function Hero() {
                   aria-selected={i === index}
                   aria-label={`Slide ${i + 1}: ${s.eyebrow}`}
                   onClick={() => setIndex(i)}
-                  className={cn(
-                    'h-0.5 w-10 transition-colors duration-250',
-                    i === index ? 'bg-gold-light' : 'bg-cream/30 hover:bg-cream/60',
-                  )}
-                />
+                  className="group/dot flex h-11 w-10 items-center"
+                >
+                  <span
+                    className={cn(
+                      'block h-0.5 w-full transition-colors duration-250',
+                      i === index ? 'bg-gold-light' : 'bg-cream/30 group-hover/dot:bg-cream/60',
+                    )}
+                  />
+                </button>
               ))}
             </div>
             <button

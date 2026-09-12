@@ -178,7 +178,7 @@ export default async function ProductPage({ params }: Params) {
               <div className="mt-6">
                 <h2 className="mb-2 text-[13px] font-medium uppercase tracking-[0.14em] text-ink">Stone details</h2>
                 <div className="overflow-x-auto">
-                  <table className="w-full min-w-[420px] border-t hairline text-[13px]">
+                  <table className="w-full border-t hairline text-[13px]">
                     <thead>
                       <tr className="border-b hairline text-left text-muted">
                         <th scope="col" className="py-2 pr-3 font-normal">Type</th>

@@ -171,7 +171,7 @@ export function AddToCartPanel({ product, breakdown }: { product: Product; break
       ) : null}
 
       <div className="flex items-center gap-5 border-t hairline pt-4">
-        <WishlistButton slug={product.slug} name={product.name} withLabel />
+        <WishlistButton slug={product.slug} name={product.name} withLabel className="min-h-11" />
         <ShareButton name={product.name} slug={product.slug} />
       </div>
 

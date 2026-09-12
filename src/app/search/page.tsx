@@ -79,7 +79,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               placeholder="Polki choker, 22K bangles, solitaire ring…"
               className="h-14 min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-muted/70"
             />
-            <button type="submit" className="text-[13px] font-medium uppercase tracking-[0.14em] text-gold-deep">
+            <button type="submit" className="min-h-11 px-1 text-[13px] font-medium uppercase tracking-[0.14em] text-gold-deep">
               Search
             </button>
           </form>

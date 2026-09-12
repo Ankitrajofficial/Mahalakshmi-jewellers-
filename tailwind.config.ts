@@ -25,6 +25,15 @@ const config: Config = {
         display: ['var(--font-display)', 'Cormorant Garamond', 'Georgia', 'serif'],
         body: ['var(--font-body)', 'Inter', 'system-ui', 'sans-serif'],
       },
+      // Display scale for headings. Fluid between phone and desktop so a hero
+      // never dwarfs a 360px screen and a section title never reads smaller
+      // than the paragraph under it.
+      fontSize: {
+        'display-xl': ['clamp(2.25rem, 1.5rem + 3.5vw, 4rem)', { lineHeight: '1.05', letterSpacing: '-0.015em' }],
+        'display-lg': ['clamp(1.875rem, 1.25rem + 2.5vw, 3rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+        'display-md': ['clamp(1.5rem, 1.125rem + 1.5vw, 2.125rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        'display-sm': ['clamp(1.25rem, 1.05rem + 0.9vw, 1.625rem)', { lineHeight: '1.2', letterSpacing: '-0.005em' }],
+      },
       spacing: {
         13: '3.25rem',
         18: '4.5rem',

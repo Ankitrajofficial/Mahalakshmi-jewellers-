@@ -179,7 +179,7 @@ function HeaderSearch({ onClose }: { onClose: () => void }) {
             aria-label="Search products"
             className="h-full flex-1 bg-transparent text-[15px] text-ink outline-none placeholder:text-muted"
           />
-          <button type="submit" className="text-[13px] font-medium uppercase tracking-[0.14em] text-gold-deep">
+          <button type="submit" className="min-h-11 px-1 text-[13px] font-medium uppercase tracking-[0.14em] text-gold-deep">
             Search
           </button>
           <button type="button" onClick={onClose} aria-label="Close search" className="p-2 text-muted hover:text-ink">
