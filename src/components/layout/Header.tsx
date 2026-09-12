@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Img as Image } from '@/components/ui/Img'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Heart, Menu, Search, ShoppingBag, User, X, ChevronDown } from 'lucide-react'
 import { Logo } from './Logo'
 import { Container } from '@/components/ui/primitives'
@@ -232,7 +233,10 @@ function MegaMenu({ categories }: { categories: Category[] }) {
 }
 
 function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: () => void }) {
-  return (
+  // The header's backdrop-blur makes it a containing block for fixed
+  // descendants, which would shrink the drawer to the header's height.
+  // Portal it to <body> so inset-0 means the viewport.
+  return createPortal(
     <div className="fixed inset-0 z-[60] lg:hidden">
       <button type="button" className="absolute inset-0 bg-ink/50" aria-label="Close menu" onClick={onClose} />
       <div className="absolute inset-y-0 left-0 flex w-[86%] max-w-sm flex-col bg-cream shadow-lift">
@@ -289,6 +293,7 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
           <p className="mt-2 text-[12px] text-muted">Online payment only — no COD</p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }
