@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="1600" height="1600" role="img">
+
+<defs>
+  <linearGradient id="metal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="1600">
+    <stop offset="0%" stop-color="#F4F2EC"/>
+    <stop offset="38%" stop-color="#CFCBC0"/>
+    <stop offset="62%" stop-color="#8B8579"/>
+    <stop offset="100%" stop-color="#CFCBC0"/>
+  </linearGradient>
+  <linearGradient id="metal2" gradientUnits="userSpaceOnUse" x1="1600" y1="0" x2="0" y2="1600">
+    <stop offset="0%" stop-color="#CFCBC0"/>
+    <stop offset="50%" stop-color="#F4F2EC"/>
+    <stop offset="100%" stop-color="#8B8579"/>
+  </linearGradient>
+  <radialGradient id="stone" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#E8EEF2"/>
+    <stop offset="100%" stop-color="#A9B7C2"/>
+  </radialGradient>
+  <radialGradient id="ground" cx="50%" cy="46%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="62%" stop-color="#FDFAF4"/>
+    <stop offset="100%" stop-color="#F5E6C8"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1600" fill="url(#ground)"/>
+
+<ellipse cx="800" cy="992" rx="544" ry="480" fill="url(#shadow)"/>
+
+    <path d="M 330 400 Q 800 920 1270 400" fill="none" stroke="url(#metal)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="367.6" cy="439.9" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="410.8" cy="481.7" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="454.1" cy="519.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="497.3" cy="552.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="540.6" cy="580.8" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="583.8" cy="605.0" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="627.0" cy="624.8" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="670.3" cy="640.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="713.5" cy="651.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="756.8" cy="657.8" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="800.0" cy="660.0" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="843.2" cy="657.8" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="886.5" cy="651.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="929.7" cy="640.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="973.0" cy="624.8" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1016.2" cy="605.0" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1059.4" cy="580.8" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1102.7" cy="552.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1145.9" cy="519.2" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1189.2" cy="481.7" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1232.4" cy="439.9" r="22" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/>
+    <g><polygon points="892.4,751.7 892.4,828.3 838.3,882.4 761.7,882.4 707.6,828.3 707.6,751.7 761.7,697.6 838.3,697.6" fill="url(#stone)" stroke="url(#metal)" stroke-width="16"/><polygon points="846.2,770.9 846.2,809.1 819.1,836.2 780.9,836.2 753.8,809.1 753.8,770.9 780.9,743.8 819.1,743.8" fill="#FFFFFF" fill-opacity="0.28"/><path d="M892.4,751.7L846.2,770.9M892.4,828.3L846.2,809.1M838.3,882.4L819.1,836.2M761.7,882.4L780.9,836.2M707.6,828.3L753.8,809.1M707.6,751.7L753.8,770.9M761.7,697.6L780.9,743.8M838.3,697.6L819.1,743.8" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="5.0" fill="none"/></g><g><polygon points="663.7,677.0 663.7,719.8 633.4,750.1 590.6,750.1 560.3,719.8 560.3,677.0 590.6,646.7 633.4,646.7" fill="url(#stone)" stroke="url(#metal)" stroke-width="8.96"/><polygon points="637.9,687.7 637.9,709.1 622.7,724.3 601.3,724.3 586.1,709.1 586.1,687.7 601.3,672.5 622.7,672.5" fill="#FFFFFF" fill-opacity="0.28"/><path d="M663.7,677.0L637.9,687.7M663.7,719.8L637.9,709.1M633.4,750.1L622.7,724.3M590.6,750.1L601.3,724.3M560.3,719.8L586.1,709.1M560.3,677.0L586.1,687.7M590.6,646.7L601.3,672.5M633.4,646.7L622.7,672.5" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.8" fill="none"/></g><g><polygon points="1039.7,677.0 1039.7,719.8 1009.4,750.1 966.6,750.1 936.3,719.8 936.3,677.0 966.6,646.7 1009.4,646.7" fill="url(#stone)" stroke="url(#metal)" stroke-width="8.96"/><polygon points="1013.9,687.7 1013.9,709.1 998.7,724.3 977.3,724.3 962.1,709.1 962.1,687.7 977.3,672.5 998.7,672.5" fill="#FFFFFF" fill-opacity="0.28"/><path d="M1039.7,677.0L1013.9,687.7M1039.7,719.8L1013.9,709.1M1009.4,750.1L998.7,724.3M966.6,750.1L977.3,724.3M936.3,719.8L962.1,709.1M936.3,677.0L962.1,687.7M966.6,646.7L977.3,672.5M1009.4,646.7L998.7,672.5" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.8" fill="none"/></g>
+    <g><circle cx="400" cy="1080" r="50" fill="none" stroke="url(#metal)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M 290 1200 A 110 110 0 0 1 510 1200 Z" fill="url(#metal)" stroke="url(#metal)" stroke-width="8"/><g><polygon points="440.7,1133.2 440.7,1166.8 416.8,1190.7 383.2,1190.7 359.3,1166.8 359.3,1133.2 383.2,1109.3 416.8,1109.3" fill="url(#stone)" stroke="url(#metal)" stroke-width="7.04"/><polygon points="420.3,1141.6 420.3,1158.4 408.4,1170.3 391.6,1170.3 379.7,1158.4 379.7,1141.6 391.6,1129.7 408.4,1129.7" fill="#FFFFFF" fill-opacity="0.28"/><path d="M440.7,1133.2L420.3,1141.6M440.7,1166.8L420.3,1158.4M416.8,1190.7L408.4,1170.3M383.2,1190.7L391.6,1170.3M359.3,1166.8L379.7,1158.4M359.3,1133.2L379.7,1141.6M383.2,1109.3L391.6,1129.7M416.8,1109.3L408.4,1129.7" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.2" fill="none"/></g></g><g><circle cx="1200" cy="1080" r="50" fill="none" stroke="url(#metal)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1090 1200 A 110 110 0 0 1 1310 1200 Z" fill="url(#metal)" stroke="url(#metal)" stroke-width="8"/><g><polygon points="1240.7,1133.2 1240.7,1166.8 1216.8,1190.7 1183.2,1190.7 1159.3,1166.8 1159.3,1133.2 1183.2,1109.3 1216.8,1109.3" fill="url(#stone)" stroke="url(#metal)" stroke-width="7.04"/><polygon points="1220.3,1141.6 1220.3,1158.4 1208.4,1170.3 1191.6,1170.3 1179.7,1158.4 1179.7,1141.6 1191.6,1129.7 1208.4,1129.7" fill="#FFFFFF" fill-opacity="0.28"/><path d="M1240.7,1133.2L1220.3,1141.6M1240.7,1166.8L1220.3,1158.4M1216.8,1190.7L1208.4,1170.3M1183.2,1190.7L1191.6,1170.3M1159.3,1166.8L1179.7,1158.4M1159.3,1133.2L1179.7,1141.6M1183.2,1109.3L1191.6,1129.7M1216.8,1109.3L1208.4,1129.7" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.2" fill="none"/></g></g>
+
+</svg>

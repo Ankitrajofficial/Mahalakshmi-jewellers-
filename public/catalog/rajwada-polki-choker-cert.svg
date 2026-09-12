@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="1600" height="1600" role="img">
+
+<defs>
+  <linearGradient id="metal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="1600">
+    <stop offset="0%" stop-color="#F0D98A"/>
+    <stop offset="38%" stop-color="#D4AF37"/>
+    <stop offset="62%" stop-color="#8F6A08"/>
+    <stop offset="100%" stop-color="#D4AF37"/>
+  </linearGradient>
+  <linearGradient id="metal2" gradientUnits="userSpaceOnUse" x1="1600" y1="0" x2="0" y2="1600">
+    <stop offset="0%" stop-color="#D4AF37"/>
+    <stop offset="50%" stop-color="#F0D98A"/>
+    <stop offset="100%" stop-color="#8F6A08"/>
+  </linearGradient>
+  <radialGradient id="stone" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#F6F1E4"/>
+    <stop offset="100%" stop-color="#C8BC9C"/>
+  </radialGradient>
+  <radialGradient id="ground" cx="50%" cy="46%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="62%" stop-color="#FDFAF4"/>
+    <stop offset="100%" stop-color="#F5E6C8"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1600" fill="url(#ground)"/>
+
+<ellipse cx="800" cy="992" rx="544" ry="480" fill="url(#shadow)"/>
+<rect x="220" y="300" width="1160" height="1000" rx="26" fill="#FFFFFF" stroke="#B8860B" stroke-opacity="0.4" stroke-width="6"/>
+     <text x="800" y="470" font-family="Georgia, serif" font-size="76" fill="#1A1512" text-anchor="middle">SGL Certificate</text>
+     <line x1="330" y1="530" x2="1270" y2="530" stroke="#D4AF37" stroke-width="4"/>
+     <text x="360" y="640" font-family="Inter, sans-serif" font-size="44" fill="#6E645C">Stone</text><line x1="720" y1="655" x2="1240" y2="655" stroke="#F5E6C8" stroke-width="4"/><text x="360" y="736" font-family="Inter, sans-serif" font-size="44" fill="#6E645C">Shape</text><line x1="720" y1="751" x2="1240" y2="751" stroke="#F5E6C8" stroke-width="4"/><text x="360" y="832" font-family="Inter, sans-serif" font-size="44" fill="#6E645C">Carat</text><line x1="720" y1="847" x2="1240" y2="847" stroke="#F5E6C8" stroke-width="4"/><text x="360" y="928" font-family="Inter, sans-serif" font-size="44" fill="#6E645C">Colour</text><line x1="720" y1="943" x2="1240" y2="943" stroke="#F5E6C8" stroke-width="4"/><text x="360" y="1024" font-family="Inter, sans-serif" font-size="44" fill="#6E645C">Clarity</text><line x1="720" y1="1039" x2="1240" y2="1039" stroke="#F5E6C8" stroke-width="4"/><text x="360" y="1120" font-family="Inter, sans-serif" font-size="44" fill="#6E645C">Report no.</text><line x1="720" y1="1135" x2="1240" y2="1135" stroke="#F5E6C8" stroke-width="4"/>
+     <circle cx="1160" cy="1180" r="90" fill="none" stroke="#6B1F2E" stroke-width="6"/>
+     <text x="1160" y="1198" font-family="Georgia, serif" font-size="46" fill="#6B1F2E" text-anchor="middle">SGL</text>
+
+</svg>

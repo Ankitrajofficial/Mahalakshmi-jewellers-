@@ -1,0 +1,53 @@
+{
+  "name": "mahalaxmi-jewellers",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "render:catalog": "tsx scripts/render-catalog.ts",
+    "qa:shots": "node scripts/shoot.mjs",
+    "qa:a11y": "node scripts/a11y.mjs",
+    "qa:overflow": "node scripts/overflow.mjs"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "clsx": "^2.1.1",
+    "jose": "^6.0.11",
+    "lucide-react": "^0.544.0",
+    "next": "15.5.25",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "resend": "^4.6.0",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.1.5",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "15.5.25",
+    "postcss": "^8.5.6",
+    "prisma": "^7.10.0",
+    "puppeteer-core": "^24.10.0",
+    "tailwindcss": "3.4.19",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

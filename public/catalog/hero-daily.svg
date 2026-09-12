@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1000" width="2400" height="1000" role="img">
+
+<defs>
+  <linearGradient id="metal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="1600">
+    <stop offset="0%" stop-color="#F3D2C0"/>
+    <stop offset="38%" stop-color="#D69A76"/>
+    <stop offset="62%" stop-color="#96573A"/>
+    <stop offset="100%" stop-color="#D69A76"/>
+  </linearGradient>
+  <linearGradient id="metal2" gradientUnits="userSpaceOnUse" x1="1600" y1="0" x2="0" y2="1600">
+    <stop offset="0%" stop-color="#D69A76"/>
+    <stop offset="50%" stop-color="#F3D2C0"/>
+    <stop offset="100%" stop-color="#96573A"/>
+  </linearGradient>
+  <radialGradient id="stone" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#F0D9D9"/>
+    <stop offset="100%" stop-color="#BE9090"/>
+  </radialGradient>
+  <radialGradient id="ground" cx="50%" cy="46%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="62%" stop-color="#FDFAF4"/>
+    <stop offset="100%" stop-color="#F5E6C8"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<defs>
+  <linearGradient id="heroGround" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="2400" y2="1000">
+    <stop offset="0%" stop-color="#1A1512"/>
+    <stop offset="55%" stop-color="#241A18"/>
+    <stop offset="100%" stop-color="#6B1F2E"/>
+  </linearGradient>
+  <radialGradient id="heroGlow" cx="72%" cy="48%" r="42%">
+    <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.34"/>
+    <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="heroScrim" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="2400" y2="0">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.86"/>
+    <stop offset="46%" stop-color="#1A1512" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0.06"/>
+  </linearGradient>
+  <pattern id="jali" width="120" height="120" patternUnits="userSpaceOnUse">
+    <path d="M 60 26 L 94 60 L 60 94 L 26 60 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 0 -34 L 34 0 L 0 34 L -34 0 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 120 -34 L 154 0 L 120 34 L 86 0 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 0 86 L 34 120 L 0 154 L -34 120 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 120 86 L 154 120 L 120 154 L 86 120 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+  </pattern>
+</defs>
+<rect width="2400" height="1000" fill="url(#heroGround)"/>
+<rect width="2400" height="1000" fill="url(#jali)"/>
+<rect width="2400" height="1000" fill="url(#heroGlow)"/>
+<g transform="translate(1720 500) scale(0.56) translate(-800 -800)">
+    <ellipse cx="800" cy="910" rx="300" ry="300" fill="none" stroke="url(#metal)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="800" cy="910" rx="300" ry="300" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="10"/>
+    <path d="M 650 670 Q 800 550 950 670" fill="none" stroke="url(#metal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    <g><polygon points="909.0,544.8 909.0,635.2 845.2,699.0 754.8,699.0 691.0,635.2 691.0,544.8 754.8,481.0 845.2,481.0" fill="url(#stone)" stroke="url(#metal)" stroke-width="18.88"/><polygon points="854.5,567.4 854.5,612.6 822.6,644.5 777.4,644.5 745.5,612.6 745.5,567.4 777.4,535.5 822.6,535.5" fill="#FFFFFF" fill-opacity="0.28"/><path d="M909.0,544.8L854.5,567.4M909.0,635.2L854.5,612.6M845.2,699.0L822.6,644.5M754.8,699.0L777.4,644.5M691.0,635.2L745.5,612.6M691.0,544.8L745.5,567.4M754.8,481.0L777.4,535.5M845.2,481.0L822.6,535.5" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="5.9" fill="none"/></g>
+    <g><polygon points="640.7,687.2 640.7,720.8 616.8,744.7 583.2,744.7 559.3,720.8 559.3,687.2 583.2,663.3 616.8,663.3" fill="url(#stone)" stroke="url(#metal)" stroke-width="7.04"/><polygon points="620.3,695.6 620.3,712.4 608.4,724.3 591.6,724.3 579.7,712.4 579.7,695.6 591.6,683.7 608.4,683.7" fill="#FFFFFF" fill-opacity="0.28"/><path d="M640.7,687.2L620.3,695.6M640.7,720.8L620.3,712.4M616.8,744.7L608.4,724.3M583.2,744.7L591.6,724.3M559.3,720.8L579.7,712.4M559.3,687.2L579.7,695.6M583.2,663.3L591.6,683.7M616.8,663.3L608.4,683.7" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.2" fill="none"/></g><g><polygon points="1040.7,687.2 1040.7,720.8 1016.8,744.7 983.2,744.7 959.3,720.8 959.3,687.2 983.2,663.3 1016.8,663.3" fill="url(#stone)" stroke="url(#metal)" stroke-width="7.04"/><polygon points="1020.3,695.6 1020.3,712.4 1008.4,724.3 991.6,724.3 979.7,712.4 979.7,695.6 991.6,683.7 1008.4,683.7" fill="#FFFFFF" fill-opacity="0.28"/><path d="M1040.7,687.2L1020.3,695.6M1040.7,720.8L1020.3,712.4M1016.8,744.7L1008.4,724.3M983.2,744.7L991.6,724.3M959.3,720.8L979.7,712.4M959.3,687.2L979.7,695.6M983.2,663.3L991.6,683.7M1016.8,663.3L1008.4,683.7" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.2" fill="none"/></g></g>
+<rect width="2400" height="1000" fill="url(#heroScrim)"/>
+<rect x="40" y="40" width="2320" height="920" fill="none" stroke="#B8860B" stroke-opacity="0.22" stroke-width="2"/>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="1600" height="1600" role="img">
+
+<defs>
+  <linearGradient id="metal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="1600">
+    <stop offset="0%" stop-color="#F0D98A"/>
+    <stop offset="38%" stop-color="#D4AF37"/>
+    <stop offset="62%" stop-color="#8F6A08"/>
+    <stop offset="100%" stop-color="#D4AF37"/>
+  </linearGradient>
+  <linearGradient id="metal2" gradientUnits="userSpaceOnUse" x1="1600" y1="0" x2="0" y2="1600">
+    <stop offset="0%" stop-color="#D4AF37"/>
+    <stop offset="50%" stop-color="#F0D98A"/>
+    <stop offset="100%" stop-color="#8F6A08"/>
+  </linearGradient>
+  <radialGradient id="stone" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#E8EEF2"/>
+    <stop offset="100%" stop-color="#A9B7C2"/>
+  </radialGradient>
+  <radialGradient id="ground" cx="50%" cy="46%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="62%" stop-color="#FDFAF4"/>
+    <stop offset="100%" stop-color="#F5E6C8"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1600" fill="url(#ground)"/>
+
+<ellipse cx="800" cy="992" rx="544" ry="480" fill="url(#shadow)"/>
+<g transform="translate(800 710) scale(0.66) translate(-800 -800)">
+    <circle cx="800" cy="860" r="230" fill="none" stroke="url(#metal)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <g><polygon points="938.6,572.6 938.6,687.4 857.4,768.6 742.6,768.6 661.4,687.4 661.4,572.6 742.6,491.4 857.4,491.4" fill="url(#stone)" stroke="url(#metal)" stroke-width="24"/><polygon points="869.3,601.3 869.3,658.7 828.7,699.3 771.3,699.3 730.7,658.7 730.7,601.3 771.3,560.7 828.7,560.7" fill="#FFFFFF" fill-opacity="0.28"/><path d="M938.6,572.6L869.3,601.3M938.6,687.4L869.3,658.7M857.4,768.6L828.7,699.3M742.6,768.6L771.3,699.3M661.4,687.4L730.7,658.7M661.4,572.6L730.7,601.3M742.6,491.4L771.3,560.7M857.4,491.4L828.7,560.7" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="7.5" fill="none"/></g>
+    <g><polygon points="698.0,720.1 698.0,759.9 669.9,788.0 630.1,788.0 602.0,759.9 602.0,720.1 630.1,692.0 669.9,692.0" fill="url(#stone)" stroke="url(#metal)" stroke-width="8.32"/><polygon points="674.0,730.1 674.0,749.9 659.9,764.0 640.1,764.0 626.0,749.9 626.0,730.1 640.1,716.0 659.9,716.0" fill="#FFFFFF" fill-opacity="0.28"/><path d="M698.0,720.1L674.0,730.1M698.0,759.9L674.0,749.9M669.9,788.0L659.9,764.0M630.1,788.0L640.1,764.0M602.0,759.9L626.0,749.9M602.0,720.1L626.0,730.1M630.1,692.0L640.1,716.0M669.9,692.0L659.9,716.0" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.6" fill="none"/></g><g><polygon points="998.0,720.1 998.0,759.9 969.9,788.0 930.1,788.0 902.0,759.9 902.0,720.1 930.1,692.0 969.9,692.0" fill="url(#stone)" stroke="url(#metal)" stroke-width="8.32"/><polygon points="974.0,730.1 974.0,749.9 959.9,764.0 940.1,764.0 926.0,749.9 926.0,730.1 940.1,716.0 959.9,716.0" fill="#FFFFFF" fill-opacity="0.28"/><path d="M998.0,720.1L974.0,730.1M998.0,759.9L974.0,749.9M969.9,788.0L959.9,764.0M930.1,788.0L940.1,764.0M902.0,759.9L926.0,749.9M902.0,720.1L926.0,730.1M930.1,692.0L940.1,716.0M969.9,692.0L959.9,716.0" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.6" fill="none"/></g>
+    <path d="M 1010 930 q 120 60 60 190" fill="none" stroke="url(#metal)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+     <circle cx="240" cy="1290" r="70" fill="none" stroke="#6E645C" stroke-width="5" stroke-dasharray="12 9"/>
+     <text x="240" y="1420" font-family="Inter, sans-serif" font-size="42" fill="#6E645C" text-anchor="middle">20 mm</text>
+     <line x1="300" y1="1330" x2="1300" y2="1330" stroke="#6E645C" stroke-width="5"/>
+     <line x1="300" y1="1330" x2="300" y2="1250" stroke="#6E645C" stroke-width="4"/><line x1="425" y1="1330" x2="425" y2="1290" stroke="#6E645C" stroke-width="4"/><line x1="550" y1="1330" x2="550" y2="1290" stroke="#6E645C" stroke-width="4"/><line x1="675" y1="1330" x2="675" y2="1290" stroke="#6E645C" stroke-width="4"/><line x1="800" y1="1330" x2="800" y2="1290" stroke="#6E645C" stroke-width="4"/><line x1="925" y1="1330" x2="925" y2="1250" stroke="#6E645C" stroke-width="4"/><line x1="1050" y1="1330" x2="1050" y2="1290" stroke="#6E645C" stroke-width="4"/><line x1="1175" y1="1330" x2="1175" y2="1290" stroke="#6E645C" stroke-width="4"/><line x1="1300" y1="1330" x2="1300" y2="1290" stroke="#6E645C" stroke-width="4"/>
+     <text x="800" y="1420" font-family="Inter, sans-serif" font-size="42" fill="#6E645C" text-anchor="middle">8 cm</text>
+
+</svg>

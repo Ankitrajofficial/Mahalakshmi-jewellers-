@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1000" width="2400" height="1000" role="img">
+
+<defs>
+  <linearGradient id="metal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="1600">
+    <stop offset="0%" stop-color="#F0D98A"/>
+    <stop offset="38%" stop-color="#D4AF37"/>
+    <stop offset="62%" stop-color="#8F6A08"/>
+    <stop offset="100%" stop-color="#D4AF37"/>
+  </linearGradient>
+  <linearGradient id="metal2" gradientUnits="userSpaceOnUse" x1="1600" y1="0" x2="0" y2="1600">
+    <stop offset="0%" stop-color="#D4AF37"/>
+    <stop offset="50%" stop-color="#F0D98A"/>
+    <stop offset="100%" stop-color="#8F6A08"/>
+  </linearGradient>
+  <radialGradient id="stone" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#E8EEF2"/>
+    <stop offset="100%" stop-color="#A9B7C2"/>
+  </radialGradient>
+  <radialGradient id="ground" cx="50%" cy="46%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="62%" stop-color="#FDFAF4"/>
+    <stop offset="100%" stop-color="#F5E6C8"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx="50%" cy="50%">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<defs>
+  <linearGradient id="heroGround" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="2400" y2="1000">
+    <stop offset="0%" stop-color="#1A1512"/>
+    <stop offset="55%" stop-color="#241A18"/>
+    <stop offset="100%" stop-color="#6B1F2E"/>
+  </linearGradient>
+  <radialGradient id="heroGlow" cx="72%" cy="48%" r="42%">
+    <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.34"/>
+    <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="heroScrim" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="2400" y2="0">
+    <stop offset="0%" stop-color="#1A1512" stop-opacity="0.86"/>
+    <stop offset="46%" stop-color="#1A1512" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#1A1512" stop-opacity="0.06"/>
+  </linearGradient>
+  <pattern id="jali" width="120" height="120" patternUnits="userSpaceOnUse">
+    <path d="M 60 26 L 94 60 L 60 94 L 26 60 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 0 -34 L 34 0 L 0 34 L -34 0 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 120 -34 L 154 0 L 120 34 L 86 0 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 0 86 L 34 120 L 0 154 L -34 120 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+    <path d="M 120 86 L 154 120 L 120 154 L 86 120 Z" fill="none" stroke="#B8860B" stroke-opacity="0.14" stroke-width="1.5"/>
+  </pattern>
+</defs>
+<rect width="2400" height="1000" fill="url(#heroGround)"/>
+<rect width="2400" height="1000" fill="url(#jali)"/>
+<rect width="2400" height="1000" fill="url(#heroGlow)"/>
+<g transform="translate(1720 500) scale(0.56) translate(-800 -800)">
+    <path d="M 330 470 Q 800 1050 1270 470" fill="none" stroke="url(#metal)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 330 470 Q 800 1050 1270 470" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="7"/>
+    <circle cx="367.6" cy="514.5" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="406.9" cy="557.1" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="446.2" cy="595.7" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="485.5" cy="630.2" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="524.8" cy="660.6" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="564.1" cy="687.0" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="603.5" cy="709.3" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="642.8" cy="727.5" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="682.1" cy="741.7" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="721.4" cy="751.9" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="760.7" cy="758.0" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="800.0" cy="760.0" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="839.3" cy="758.0" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="878.6" cy="751.9" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="917.9" cy="741.7" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="957.2" cy="727.5" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="996.5" cy="709.3" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1035.9" cy="687.0" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1075.2" cy="660.6" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1114.5" cy="630.2" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1153.8" cy="595.7" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1193.1" cy="557.1" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/><circle cx="1232.4" cy="514.5" r="20" fill="url(#metal2)" stroke="url(#metal)" stroke-width="3"/>
+    <line x1="555.6" y1="681.6" x2="555.6" y2="751.6" fill="none" stroke="url(#metal)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><g><polygon points="592.6,776.3 592.6,806.9 570.9,828.5 540.3,828.5 518.6,806.9 518.6,776.3 540.3,754.6 570.9,754.6" fill="url(#stone)" stroke="url(#metal)" stroke-width="6.4"/><polygon points="574.1,783.9 574.1,799.2 563.3,810.1 547.9,810.1 537.1,799.2 537.1,783.9 547.9,773.1 563.3,773.1" fill="#FFFFFF" fill-opacity="0.28"/><path d="M592.6,776.3L574.1,783.9M592.6,806.9L574.1,799.2M570.9,828.5L563.3,810.1M540.3,828.5L547.9,810.1M518.6,806.9L537.1,799.2M518.6,776.3L537.1,783.9M540.3,754.6L547.9,773.1M570.9,754.6L563.3,773.1" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.0" fill="none"/></g><line x1="687.2" y1="743.3" x2="687.2" y2="813.3" fill="none" stroke="url(#metal)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><g><polygon points="737.1,846.6 737.1,888.0 707.9,917.2 666.5,917.2 637.3,888.0 637.3,846.6 666.5,817.4 707.9,817.4" fill="url(#stone)" stroke="url(#metal)" stroke-width="8.64"/><polygon points="712.1,857.0 712.1,877.6 697.5,892.2 676.9,892.2 662.3,877.6 662.3,857.0 676.9,842.4 697.5,842.4" fill="#FFFFFF" fill-opacity="0.28"/><path d="M737.1,846.6L712.1,857.0M737.1,888.0L712.1,877.6M707.9,917.2L697.5,892.2M666.5,917.2L676.9,892.2M637.3,888.0L662.3,877.6M637.3,846.6L662.3,857.0M666.5,817.4L676.9,842.4M707.9,817.4L697.5,842.4" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.7" fill="none"/></g><line x1="912.8" y1="743.3" x2="912.8" y2="813.3" fill="none" stroke="url(#metal)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><g><polygon points="962.7,846.6 962.7,888.0 933.5,917.2 892.1,917.2 862.9,888.0 862.9,846.6 892.1,817.4 933.5,817.4" fill="url(#stone)" stroke="url(#metal)" stroke-width="8.64"/><polygon points="937.7,857.0 937.7,877.6 923.1,892.2 902.5,892.2 887.9,877.6 887.9,857.0 902.5,842.4 923.1,842.4" fill="#FFFFFF" fill-opacity="0.28"/><path d="M962.7,846.6L937.7,857.0M962.7,888.0L937.7,877.6M933.5,917.2L923.1,892.2M892.1,917.2L902.5,892.2M862.9,888.0L887.9,877.6M862.9,846.6L887.9,857.0M892.1,817.4L902.5,842.4M933.5,817.4L923.1,842.4" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.7" fill="none"/></g><line x1="1044.4" y1="681.6" x2="1044.4" y2="751.6" fill="none" stroke="url(#metal)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><g><polygon points="1081.4,776.3 1081.4,806.9 1059.7,828.5 1029.1,828.5 1007.4,806.9 1007.4,776.3 1029.1,754.6 1059.7,754.6" fill="url(#stone)" stroke="url(#metal)" stroke-width="6.4"/><polygon points="1062.9,783.9 1062.9,799.2 1052.1,810.1 1036.7,810.1 1025.9,799.2 1025.9,783.9 1036.7,773.1 1052.1,773.1" fill="#FFFFFF" fill-opacity="0.28"/><path d="M1081.4,776.3L1062.9,783.9M1081.4,806.9L1062.9,799.2M1059.7,828.5L1052.1,810.1M1029.1,828.5L1036.7,810.1M1007.4,806.9L1025.9,799.2M1007.4,776.3L1025.9,783.9M1029.1,754.6L1036.7,773.1M1059.7,754.6L1052.1,773.1" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.0" fill="none"/></g>
+    <line x1="800.0" y1="760.0" x2="800.0" y2="820.0" fill="none" stroke="url(#metal)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><g><polygon points="892.4,881.7 892.4,958.3 838.3,1012.4 761.7,1012.4 707.6,958.3 707.6,881.7 761.7,827.6 838.3,827.6" fill="url(#stone)" stroke="url(#metal)" stroke-width="16"/><polygon points="846.2,900.9 846.2,939.1 819.1,966.2 780.9,966.2 753.8,939.1 753.8,900.9 780.9,873.8 819.1,873.8" fill="#FFFFFF" fill-opacity="0.28"/><path d="M892.4,881.7L846.2,900.9M892.4,958.3L846.2,939.1M838.3,1012.4L819.1,966.2M761.7,1012.4L780.9,966.2M707.6,958.3L753.8,939.1M707.6,881.7L753.8,900.9M761.7,827.6L780.9,873.8M838.3,827.6L819.1,873.8" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="5.0" fill="none"/></g></g>
+<rect width="2400" height="1000" fill="url(#heroScrim)"/>
+<rect x="40" y="40" width="2320" height="920" fill="none" stroke="#B8860B" stroke-opacity="0.22" stroke-width="2"/>
+</svg>
