@@ -1,0 +1,447 @@
+/**
+ * Catalogue photography. Licensed Adobe Stock (free tier) placeholders until
+ * the client's own photography lands — see scripts/generate-images.mjs for
+ * the SVG plates these replace. Regenerate with scripts/process-photos.mjs;
+ * licences are listed in public/photos/CREDITS.md.
+ *
+ * Any product or category missing here falls back to its SVG plate, so a
+ * partial set is fine.
+ */
+
+export type Photo = {
+  url: string
+  width: number
+  height: number
+  blurDataURL: string
+  alt: string
+  credit: string
+}
+
+export const PRODUCT_PHOTOS: Record<string, Photo> = {
+  'gulab-solitaire-engagement-ring': {
+    url: '/photos/products/gulab-solitaire-engagement-ring.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Gulab Solitaire Engagement Ring — round brilliant in a white gold prong setting',
+    credit: 'Adobe Stock #421565370',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAeEAACAgICAwAAAAAAAAAAAAABAgMRABIhMRMjkf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCZFKBW7BV6Jq6xZfW+okWTjtDYyWsra12Mbzu3JI+YJH//2Q==',
+  },
+  'amrapali-polki-cocktail-ring': {
+    url: '/photos/products/amrapali-polki-cocktail-ring.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Amrapali Polki Cocktail Ring — traditional Indian gold ring, close up',
+    credit: 'Adobe Stock #311686379',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQG/8QAIhABAAIBAwMFAAAAAAAAAAAAAQIDBAARIQVBYRITFDFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAYEQEAAwEAAAAAAAAAAAAAAAACAAERMf/aAAwDAQACEQMRAD8APjmdQpwaTClVJbPZWw2YP3Hvtyb8vc1Jl9a6njWlOZtXdCIO8Td88caQxsSph8dFrya5xsF/I+oTyJrGs5PKq+dGwEaWdljbCzZ//9k=',
+  },
+  'panna-emerald-halo-ring': {
+    url: '/photos/products/panna-emerald-halo-ring.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Panna Emerald Halo Ring — emerald centre inside a halo of diamonds',
+    credit: 'Adobe Stock #647582018',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQUG/8QAHxAAAgIBBAMAAAAAAAAAAAAAAQIAERIDBAUhMVFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMrwu24/XTUO9c5B1UDPClN232uupLcAOwU2oJo+xAMR4MIH/9k=',
+  },
+  'bandhej-everyday-gold-band': {
+    url: '/photos/products/bandhej-everyday-gold-band.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Bandhej Everyday Gold Band — plain gold bands on white',
+    credit: 'Adobe Stock #108042118',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQFBv/EAB4QAAICAgIDAAAAAAAAAAAAAAECAxEABAUxQcHh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAQQL/2gAMAwEAAhEDEQA/ANtt7MkLqscJksWaPQ94gecZTT6pVh4LfMrSRJKAHUNXWCNeFRQjGBOsZCbf/9k=',
+  },
+  'jaipur-meenakari-rani-haar': {
+    url: '/photos/products/jaipur-meenakari-rani-haar.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Jaipur Meenakari Rani Haar — ethnic gold necklace with matching earrings',
+    credit: 'Adobe Stock #1135629572',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAB/8QAIhAAAgIBBAEFAAAAAAAAAAAAAQIDBBEABQYhEiIxYXGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABgRAQADAQAAAAAAAAAAAAAAAAEAAhFB/9oADAMBAAIRAxEAPwDbPH+OQ0VjImRh2bDyeLfeD0R+aoeA7fPEs0V+xJHIAyMFXsaPQMZ95eObMiHIIYk50npWXqUK8UZJUKceTE49RGPf40Bd3GK0OT//2Q==',
+  },
+  'chandra-diamond-necklace-set': {
+    url: '/photos/products/chandra-diamond-necklace-set.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Chandra Diamond Necklace Set — diamond necklace on a dark ground',
+    credit: 'Adobe Stock #455953296',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIEBv/EAB8QAAICAQQDAAAAAAAAAAAAAAECAAMRBBIxQRMhIv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDG2+LUIrrsqtB+hnAh1RrssUsys4UByD6z3wJGWxwBFLMezA//2Q==',
+  },
+  'rajwada-polki-choker': {
+    url: '/photos/products/rajwada-polki-choker.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Rajwada Polki Choker — kundan choker worn by a bride, close up',
+    credit: 'Adobe Stock #706462686',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAIRAAAQQCAAcAAAAAAAAAAAAAAQACAwQFERIhIiRBQmL/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEQMRAD8AChSrxM7cdLho+ShsYirNLxxV3huvU6BWMctcjDomSABoAB1zUEl21I4udYkJP0hMrVOgv//Z',
+  },
+  'sitara-rose-gold-everyday-necklace': {
+    url: '/photos/products/sitara-rose-gold-everyday-necklace.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Sitara Everyday Necklace — fine gold necklace with small stones on white',
+    credit: 'Adobe Stock #518100872',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQIG/8QAGxAAAgMBAQEAAAAAAAAAAAAAAREAAgMSImH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A3mulc+en6sKhfZcLVFkw0WIwP//Z',
+  },
+  'amer-temple-jhumka': {
+    url: '/photos/products/amer-temple-jhumka.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Amer Temple Jhumka — pair of gold temple jhumkas with red stones',
+    credit: 'Adobe Stock #696446410',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQMEBv/EACIQAAIBAwMFAQAAAAAAAAAAAAECAwAEERIhQQUTMlFx4f/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEAAgMAAAAAAAAAAAAAAAAAAQIAESH/2gAMAwEAAhEDEQA/ANc10BfXam9UKkWyafA+88/tUdOcyWMTNN3mK7vjGT8otYWrO7mEFnzqOTvmmwwxwR6IlCqOBU1DXsZK1k//2Q==',
+  },
+  'sawai-polki-chandbali': {
+    url: '/photos/products/sawai-polki-chandbali.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Sawai Polki Chandbali — kundan earrings on red satin',
+    credit: 'Adobe Stock #362975478',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQME/8QAHxAAAgEEAgMAAAAAAAAAAAAAAQIDABESITFBBCNh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwX/xAAXEQEBAQEAAAAAAAAAAAAAAAABABED/9oADAMBAAIRAxEAPwAqJ4/ImFo1zAsY7a5tf51epv65HQF1AYjE7Io6El5hG5LKdb5FbFnd9uc27Ztk0QVvnq7f/9k=',
+  },
+  'roshni-solitaire-studs': {
+    url: '/photos/products/roshni-solitaire-studs.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Roshni Solitaire Studs — round diamond studs on white',
+    credit: 'Adobe Stock #350596883',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgEG/8QAGxABAAMBAAMAAAAAAAAAAAAAAQACEQMhMVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A23W7TA52uu+ozyCmPyOTIH//2Q==',
+  },
+  'meena-kundan-drop-earrings': {
+    url: '/photos/products/meena-kundan-drop-earrings.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Meena Kundan Drop Earrings — vintage gold Indian drop earrings on white',
+    credit: 'Adobe Stock #680088224',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIEBv/EAB4QAAICAgIDAAAAAAAAAAAAAAIDAREABDFREjJh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAMAwEAAhEDEQA/ANiW6Yb5gQHCRD2mKi+bvrKtZ47OuDQ4KLq7r5jNWDVyDBghnmJwJStAeChgR6jJB2VMv//Z',
+  },
+  'kesari-meenakari-bangle-pair': {
+    url: '/photos/products/kesari-meenakari-bangle-pair.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Kesari Meenakari Bangle Pair — traditional Indian gold bangles',
+    credit: 'Adobe Stock #94991381',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMFBv/EAB8QAAICAQQDAAAAAAAAAAAAAAECAxEABAUxcRIUQf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAYEQEBAQEBAAAAAAAAAAAAAAABAgARIf/aAAwDAQACEQMRAD8A0k24TrJEPbhqQ8xqDXfWVNJOdRD5GrBKkjhq+jCWCFXLLEgY8kKLxmCZR6udUJ4b/9k=',
+  },
+  'nur-diamond-tennis-bangle': {
+    url: '/photos/products/nur-diamond-tennis-bangle.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Nur Diamond Tennis Bangle — channel-set diamond line in gold',
+    credit: 'Adobe Stock #201110440',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQG/8QAHhAAAgICAgMAAAAAAAAAAAAAAQIDEQAEEhMiMWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/ANlHs9jCNK5VZJ9LlKkgUTy+nAtNzHPLGp8VYViyOxUYQv/Z',
+  },
+  'aabha-diamond-line-bracelet': {
+    url: '/photos/products/aabha-diamond-line-bracelet.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Aabha Diamond Line Bracelet — flexible diamond bracelet',
+    credit: 'Adobe Stock #308628943',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAgb/xAAcEAACAgIDAAAAAAAAAAAAAAABAgAREhMDUXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AvCWq81AiVslB7h08V3rS/I4H/9k=',
+  },
+  'gehna-22k-rope-chain': {
+    url: '/photos/products/gehna-22k-rope-chain.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Gehna 22K Rope Chain — gold chain isolated on white',
+    credit: 'Adobe Stock #422651899',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBv/EAB4QAAEEAQUAAAAAAAAAAAAAAAABAgMREiEzQXKx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAx/9oADAMBAAIRAxEAPwDe7fXwYCSed8EmDKVKvXgIa//Z',
+  },
+  'vajra-18k-box-chain': {
+    url: '/photos/products/vajra-18k-box-chain.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Vajra 18K Box Chain — gold chain necklace',
+    credit: 'Adobe Stock #274112914',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAWEAEBAQAAAAAAAAAAAAAAAAAAASH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL63SAg//9k=',
+  },
+  'radha-krishna-temple-pendant': {
+    url: '/photos/products/radha-krishna-temple-pendant.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Radha Krishna Temple Pendant — vintage gold pendant on a gold chain',
+    credit: 'Adobe Stock #291800171',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBv/EABkQAAMBAQEAAAAAAAAAAAAAAAECEQADEv/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/ANx2YJCTKfOpMH5o89qDDRc2MtL/2Q==',
+  },
+  'tara-solitaire-pendant': {
+    url: '/photos/products/tara-solitaire-pendant.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Tara Solitaire Pendant — diamond pendant on a fine chain, white background',
+    credit: 'Adobe Stock #363267174',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQAG/8QAGxAAAwEAAwEAAAAAAAAAAAAAAQIRAEFRYaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A3rBmEVyp7mb780VDS8Zwf//Z',
+  },
+  'saubhagya-traditional-mangalsutra': {
+    url: '/photos/products/saubhagya-traditional-mangalsutra.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Saubhagya Traditional Mangalsutra — black bead chain with gold vatis',
+    credit: 'Adobe Stock #714508423',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgEG/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAECITFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AN9SbKqQZ7HogP/Z',
+  },
+  'anaya-diamond-vati-mangalsutra': {
+    url: '/photos/products/anaya-diamond-vati-mangalsutra.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Anaya Diamond Vati Mangalsutra — mangalsutra with haldi and kumkum',
+    credit: 'Adobe Stock #695463139',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwb/xAAeEAACAgICAwAAAAAAAAAAAAABAgMRACEEE0FRcf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AIcQyDjdwUlGJWx4wwjMLCkjGj5s8UBhSQhG183evV4BYsbOzgqLh//Z',
+  },
+  'nathni-polki-nose-ring': {
+    url: '/photos/products/nathni-polki-nose-ring.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Nathni Polki Nose Ring — worn with gold bridal jewellery',
+    credit: 'Adobe Stock #826353722',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAH/xAAhEAABBAICAgMAAAAAAAAAAAABAgMEEQAFEkEhIjEyYf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAZEQEAAgMAAAAAAAAAAAAAAAABAAIREjH/2gAMAwEAAhEDEQA/ADNxomw0UJLwYQnj9gfewKNV3fRwmjkvQ4bjCltp4OqACzR6yaCOk6WS7zWCXKoHxjQy3yVaQfPyR+Ydtq4iqnGf/9k=',
+  },
+  'ghungroo-silver-payal': {
+    url: '/photos/products/ghungroo-silver-payal.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Ghungroo Silver Payal — ghungroo anklet on a dancer\'s feet',
+    credit: 'Adobe Stock #487124981',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAwQFBv/EACAQAQABAwUAAwAAAAAAAAAAAAECAAMFBBESITETQXH/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABoRAQACAwEAAAAAAAAAAAAAAAEAAgMEESH/2gAMAwEAAhEDEQA/AIeCvSx1q/8ANo53JTYsNwTcJdJ+pSORxmot6pYWxLhzYw8gvfGtTMHludPofdDQ38oTmR6Et10KpxfJ/9k=',
+  },
+  'payal-22k-gold-anklet': {
+    url: '/photos/products/payal-22k-gold-anklet.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Payal 22K Gold Anklet — golden bell anklet on the feet',
+    credit: 'Adobe Stock #276453369',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAiEAACAQMDBQEAAAAAAAAAAAABAhEAAwQSE2EFISIxUbH/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECAyH/2gAMAwEAAhEDEQA/AE5JvLYO0N0sC8N94o25eREM5Y1KGhU1AVMfrGWSFUogHqFmO/M0V83JuNLX7gMAeJj8oxYoYzi6XD//2Q==',
+  },
+  'lakshmi-temple-haar': {
+    url: '/photos/products/lakshmi-temple-haar.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Lakshmi Temple Haar — Goddess Lakshmi motif gold necklace',
+    credit: 'Adobe Stock #311687355',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAgEAACAQMEAwAAAAAAAAAAAAABAhEAAwQFEiExE0Jh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAbEQABBAMAAAAAAAAAAAAAAAABAAIDIQQSof/aAAwDAQACEQMRAD8APK0+2lojxonE7lNRXwVDkDIsnn2eCKXVGdLu1XaJ4E9fKjHIugmHPdRxojrTuImYONi1/9k=',
+  },
+  'vanki-temple-armlet': {
+    url: '/photos/products/vanki-temple-armlet.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Vanki Temple Armlet — Rajasthani bajuband worn on the upper arm',
+    credit: 'Adobe Stock #680077989',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMEBv/EABwQAAIDAQEBAQAAAAAAAAAAAAECAwQRACEFIv/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQEBAQEAAAAAAAAAAAAAAAABACER/9oADAMBAAIRAxEAPwDW2fpyw2GjWsWAbN96ynO1iusjxmMnfDzGRWP6APEBgwcQR1kpzC//2Q==',
+  },
+  'rajmahal-polki-bridal-choker': {
+    url: '/photos/products/rajmahal-polki-bridal-choker.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Rajmahal Polki Bridal Choker — bridal gold jewellery with earrings on cloth',
+    credit: 'Adobe Stock #366255629',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAIBAAAQIGAwEAAAAAAAAAAAAAAQIDAAQREhMxISJRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A0L3WnQG2pnGOqkroUkehVagw0tdhGOYC0A9TbyB4a7+xSUgkpOtQEn0DyRrKaDzUTGf/2Q==',
+  },
+  'kundan-meena-rani-haar': {
+    url: '/photos/products/kundan-meena-rani-haar.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Kundan Meena Rani Haar — Indian gold jewellery',
+    credit: 'Adobe Stock #489499178',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQG/8QAHBABAQADAAMBAAAAAAAAAAAAAQIAAxESEyEx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQADAAAAAAAAAAAAAAAAAAAAESH/2gAMAwEAAhEDEQA/AMp6ddoVE8fy9b87kzokUbBFOcxPKtd+cLND0TDbdi1YNL9cpUOH/9k=',
+  },
+  'silver-pooja-thali-set': {
+    url: '/photos/products/silver-pooja-thali-set.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Silver Pooja Thali Set — puja thali with an oil lamp',
+    credit: 'Adobe Stock #1002176743',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAHRAAAgICAwEAAAAAAAAAAAAAAQIDBBEhAAVBMf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQIR/9oADAMBAAIRAxEAPwCpXzDYScBZpHOAhbe8ax57xV+1suFdKRZWGjnJ++8zLsUiDKN5491XWRXKSzSyzBifitgDgTOsemj/2Q==',
+  },
+  'raja-diamond-signet-ring': {
+    url: '/photos/products/raja-diamond-signet-ring.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Raja Diamond Signet Ring — diamond ring isolated on white',
+    credit: 'Adobe Stock #239883838',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBv/EABsQAQACAwEBAAAAAAAAAAAAAAEAAgMRMRIh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDdZnNutcPgerbcpVWovdfY0HpuEg//2Q==',
+  },
+  'vivah-polki-bridal-set': {
+    url: '/photos/products/vivah-polki-bridal-set.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Vivah Polki Bridal Set — traditional Indian bridal necklace and jewellery',
+    credit: 'Adobe Stock #311686002',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAP/xAAhEAABAwQBBQAAAAAAAAAAAAABAgMRAAQFIRMSI3GBkf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQIAAxITMVH/2gAMAwEAAhEDEQA/AKuOh1ttLHGSgz0rnY8jYoFzkBaPFlcNKGylDUj6TuiuZC44CQoAiToRTsCwi8x/LcdxYWUyoAmPYoFZ1rk3JQtQggez/9k=',
+  },
+  'sonal-diamond-bridal-set': {
+    url: '/photos/products/sonal-diamond-bridal-set.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Sonal Diamond Bridal Set — matching diamond earrings and pendant',
+    credit: 'Adobe Stock #318622687',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEG/8QAHhAAAgICAgMAAAAAAAAAAAAAAQIAAxESBFETIYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwDbpyVZGOTkMwHZx1FpfyUo+CNlB9yPQllldjA7VklfsSBuP//Z',
+  },
+}
+
+export const CATEGORY_PHOTOS: Record<string, Photo> = {
+  'rings': {
+    url: '/photos/categories/rings.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Rings',
+    credit: 'Adobe Stock #421565370',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAeEAACAgICAwAAAAAAAAAAAAABAgMRABIhMRMjkf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCZFKBW7BV6Jq6xZfW+okWTjtDYyWsra12Mbzu3JI+YJH//2Q==',
+  },
+  'necklaces-and-sets': {
+    url: '/photos/categories/necklaces-and-sets.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Necklaces & Sets',
+    credit: 'Adobe Stock #1135629572',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAB/8QAIhAAAgIBBAEFAAAAAAAAAAAAAQIDBBEABQYhEiIxYXGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABgRAQADAQAAAAAAAAAAAAAAAAEAAhFB/9oADAMBAAIRAxEAPwDbPH+OQ0VjImRh2bDyeLfeD0R+aoeA7fPEs0V+xJHIAyMFXsaPQMZ95eObMiHIIYk50npWXqUK8UZJUKceTE49RGPf40Bd3GK0OT//2Q==',
+  },
+  'earrings': {
+    url: '/photos/categories/earrings.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Earrings',
+    credit: 'Adobe Stock #696446410',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQMEBv/EACIQAAIBAwMFAQAAAAAAAAAAAAECAwAEERIhQQUTMlFx4f/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEAAgMAAAAAAAAAAAAAAAAAAQIAESH/2gAMAwEAAhEDEQA/ANc10BfXam9UKkWyafA+88/tUdOcyWMTNN3mK7vjGT8otYWrO7mEFnzqOTvmmwwxwR6IlCqOBU1DXsZK1k//2Q==',
+  },
+  'bangles-and-kadas': {
+    url: '/photos/categories/bangles-and-kadas.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Bangles & Kadas',
+    credit: 'Adobe Stock #94991381',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMFBv/EAB8QAAICAQQDAAAAAAAAAAAAAAECAxEABAUxcRIUQf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAYEQEBAQEBAAAAAAAAAAAAAAABAgARIf/aAAwDAQACEQMRAD8A0k24TrJEPbhqQ8xqDXfWVNJOdRD5GrBKkjhq+jCWCFXLLEgY8kKLxmCZR6udUJ4b/9k=',
+  },
+  'bracelets': {
+    url: '/photos/categories/bracelets.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Bracelets',
+    credit: 'Adobe Stock #308628943',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAgb/xAAcEAACAgIDAAAAAAAAAAAAAAABAgAREhMDUXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AvCWq81AiVslB7h08V3rS/I4H/9k=',
+  },
+  'chains': {
+    url: '/photos/categories/chains.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Chains',
+    credit: 'Adobe Stock #422651899',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBv/EAB4QAAEEAQUAAAAAAAAAAAAAAAABAgMREiEzQXKx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAx/9oADAMBAAIRAxEAPwDe7fXwYCSed8EmDKVKvXgIa//Z',
+  },
+  'pendants': {
+    url: '/photos/categories/pendants.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Pendants',
+    credit: 'Adobe Stock #291800171',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBv/EABkQAAMBAQEAAAAAAAAAAAAAAAECEQADEv/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/ANx2YJCTKfOpMH5o89qDDRc2MtL/2Q==',
+  },
+  'mangalsutra': {
+    url: '/photos/categories/mangalsutra.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Mangalsutra',
+    credit: 'Adobe Stock #714508423',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgEG/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAECITFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AN9SbKqQZ7HogP/Z',
+  },
+  'nose-pins': {
+    url: '/photos/categories/nose-pins.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Nose Pins',
+    credit: 'Adobe Stock #826353722',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAH/xAAhEAABBAICAgMAAAAAAAAAAAABAgMEEQAFEkEhIjEyYf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAZEQEAAgMAAAAAAAAAAAAAAAABAAIREjH/2gAMAwEAAhEDEQA/ADNxomw0UJLwYQnj9gfewKNV3fRwmjkvQ4bjCltp4OqACzR6yaCOk6WS7zWCXKoHxjQy3yVaQfPyR+Ydtq4iqnGf/9k=',
+  },
+  'anklets-and-payal': {
+    url: '/photos/categories/anklets-and-payal.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Anklets & Payal',
+    credit: 'Adobe Stock #276453369',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAiEAACAQMDBQEAAAAAAAAAAAABAhEAAwQSE2EFISIxUbH/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECAyH/2gAMAwEAAhEDEQA/AE5JvLYO0N0sC8N94o25eREM5Y1KGhU1AVMfrGWSFUogHqFmO/M0V83JuNLX7gMAeJj8oxYoYzi6XD//2Q==',
+  },
+  'temple-jewellery': {
+    url: '/photos/categories/temple-jewellery.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Temple Jewellery',
+    credit: 'Adobe Stock #311687355',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAgEAACAQMEAwAAAAAAAAAAAAABAhEAAwQFEiExE0Jh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAbEQABBAMAAAAAAAAAAAAAAAABAAIDIQQSof/aAAwDAQACEQMRAD8APK0+2lojxonE7lNRXwVDkDIsnn2eCKXVGdLu1XaJ4E9fKjHIugmHPdRxojrTuImYONi1/9k=',
+  },
+  'polki-and-kundan': {
+    url: '/photos/categories/polki-and-kundan.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Polki & Kundan',
+    credit: 'Adobe Stock #706462686',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAIRAAAQQCAAcAAAAAAAAAAAAAAQACAwQFERIhIiRBQmL/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEQMRAD8AChSrxM7cdLho+ShsYirNLxxV3huvU6BWMctcjDomSABoAB1zUEl21I4udYkJP0hMrVOgv//Z',
+  },
+  'silver-articles': {
+    url: '/photos/categories/silver-articles.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Silver Articles',
+    credit: 'Adobe Stock #1002176743',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAHRAAAgICAwEAAAAAAAAAAAAAAQIDBBEhAAVBMf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQIR/9oADAMBAAIRAxEAPwCpXzDYScBZpHOAhbe8ax57xV+1suFdKRZWGjnJ++8zLsUiDKN5491XWRXKSzSyzBifitgDgTOsemj/2Q==',
+  },
+  'mens-jewellery': {
+    url: '/photos/categories/mens-jewellery.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Men\'s Jewellery',
+    credit: 'Adobe Stock #239883838',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBv/EABsQAQACAwEBAAAAAAAAAAAAAAEAAgMRMRIh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDdZnNutcPgerbcpVWovdfY0HpuEg//2Q==',
+  },
+  'bridal-sets': {
+    url: '/photos/categories/bridal-sets.jpg',
+    width: 1600,
+    height: 1600,
+    alt: 'Bridal Sets',
+    credit: 'Adobe Stock #311686002',
+    blurDataURL:
+      'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAP/xAAhEAABAwQBBQAAAAAAAAAAAAABAgMRAAQFIRMSI3GBkf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQIAAxITMVH/2gAMAwEAAhEDEQA/AKuOh1ttLHGSgz0rnY8jYoFzkBaPFlcNKGylDUj6TuiuZC44CQoAiToRTsCwi8x/LcdxYWUyoAmPYoFZ1rk3JQtQggez/9k=',
+  },
+}

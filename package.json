@@ -16,6 +16,7 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:studio": "prisma studio",
     "render:catalog": "tsx scripts/render-catalog.ts",
+    "photos:process": "node scripts/process-photos.mjs",
     "qa:shots": "node scripts/shoot.mjs",
     "qa:a11y": "node scripts/a11y.mjs",
     "qa:overflow": "node scripts/overflow.mjs"
