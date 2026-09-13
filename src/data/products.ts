@@ -1,5 +1,6 @@
 import type { MakingType, Metal, MetalColour, Product, PricingMode, Purity, Stone } from '@/types/catalog'
 import { CATEGORY_BY_SLUG } from './categories'
+import { PRODUCT_PHOTOS } from './photos'
 
 /** 1x1 cream pixel — the blur-up placeholder behind every product plate. */
 export const BLUR =
@@ -68,38 +69,55 @@ function build(d: Draft, index: number): Product {
     ratePerCarat: s.rate,
   }))
 
-  const images: Product['images'] = [
-    {
-      id: `${d.slug}-img-1`,
-      url: `/catalog/${d.slug}-1.svg`,
-      alt: `${d.name} — ${d.purity} ${d.metal.toLowerCase()}, front view`,
-      kind: 'product',
-      width: 1600,
-      height: 1600,
-      blurDataURL: BLUR,
-      position: 0,
-    },
-    {
-      id: `${d.slug}-img-2`,
-      url: `/catalog/${d.slug}-2.svg`,
-      alt: `${d.name} styled on a Jaipur editorial set`,
-      kind: 'lifestyle',
-      width: 1600,
-      height: 1600,
-      blurDataURL: BLUR,
-      position: 1,
-    },
-    {
-      id: `${d.slug}-img-3`,
-      url: `/catalog/${d.slug}-3.svg`,
-      alt: `${d.name} shown against a 20 mm coin and centimetre scale`,
-      kind: 'scale',
-      width: 1600,
-      height: 1600,
-      blurDataURL: BLUR,
-      position: 2,
-    },
-  ]
+  // A real photograph replaces the whole plate set: mixing one photo with two
+  // illustrated plates in a gallery reads as a mistake. Products without a
+  // photo keep the SVG plates.
+  const photo = PRODUCT_PHOTOS[d.slug]
+  const images: Product['images'] = photo
+    ? [
+        {
+          id: `${d.slug}-img-1`,
+          url: photo.url,
+          alt: photo.alt,
+          kind: 'product',
+          width: photo.width,
+          height: photo.height,
+          blurDataURL: photo.blurDataURL,
+          position: 0,
+        },
+      ]
+    : [
+        {
+          id: `${d.slug}-img-1`,
+          url: `/catalog/${d.slug}-1.svg`,
+          alt: `${d.name} — ${d.purity} ${d.metal.toLowerCase()}, front view`,
+          kind: 'product',
+          width: 1600,
+          height: 1600,
+          blurDataURL: BLUR,
+          position: 0,
+        },
+        {
+          id: `${d.slug}-img-2`,
+          url: `/catalog/${d.slug}-2.svg`,
+          alt: `${d.name} styled on a Jaipur editorial set`,
+          kind: 'lifestyle',
+          width: 1600,
+          height: 1600,
+          blurDataURL: BLUR,
+          position: 1,
+        },
+        {
+          id: `${d.slug}-img-3`,
+          url: `/catalog/${d.slug}-3.svg`,
+          alt: `${d.name} shown against a 20 mm coin and centimetre scale`,
+          kind: 'scale',
+          width: 1600,
+          height: 1600,
+          blurDataURL: BLUR,
+          position: 2,
+        },
+      ]
   if (d.cert) {
     images.push({
       id: `${d.slug}-img-cert`,
@@ -109,7 +127,7 @@ function build(d: Draft, index: number): Product {
       width: 1600,
       height: 1600,
       blurDataURL: BLUR,
-      position: 3,
+      position: images.length,
     })
   }
 

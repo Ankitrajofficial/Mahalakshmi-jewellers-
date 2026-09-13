@@ -1,7 +1,8 @@
 import type { Category } from '@/types/catalog'
+import { CATEGORY_PHOTOS } from './photos'
 
 /** Section 6 — the sixteen categories the showroom actually merchandises. */
-export const CATEGORIES: Category[] = [
+const PLATES: Category[] = [
   {
     id: 'cat-rings',
     slug: 'rings',
@@ -155,6 +156,12 @@ export const CATEGORIES: Category[] = [
     position: 16,
   },
 ]
+
+/** A licensed photograph replaces the SVG plate wherever one exists. */
+export const CATEGORIES: Category[] = PLATES.map((c) => ({
+  ...c,
+  image: CATEGORY_PHOTOS[c.slug]?.url ?? c.image,
+}))
 
 export const CATEGORY_BY_SLUG = new Map(CATEGORIES.map((c) => [c.slug, c]))
 export const CATEGORY_BY_ID = new Map(CATEGORIES.map((c) => [c.id, c]))
